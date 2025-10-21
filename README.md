@@ -1,0 +1,1 @@
+Tp_02 sur un jeu interactif avec Godot. Création d'une scnène 2D avec un personnage 2D ainsi que des objets intéractifs. Le jeu comporte un menu simple permettant de résumer, voir les commandes et quitter le jeu. 
