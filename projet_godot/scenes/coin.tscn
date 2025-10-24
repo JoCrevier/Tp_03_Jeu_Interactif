@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dcepbid2o8w4k" path="res://assets/spritesheets/spritesheet-tiles-default.png" id="2_i64fm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i64fm"]
+radius = 20.0
+height = 42.0
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_rwqht")
