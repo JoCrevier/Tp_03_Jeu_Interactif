@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name joueur
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
@@ -14,6 +15,14 @@ enum Etat {
 	SAUT,
 	GLISSE_MUR
 }
+
+signal score_changed(new_score: int)
+
+var score: int = 0
+
+func add_score(value: int = 1):
+	score += value
+	emit_signal("score_changed", score)
 
 
 func _physics_process(delta: float) -> void:
