@@ -5,4 +5,4 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is joueur:
-		Main.revenir_scene_precedente()
+		Main.changer_scene(nouvelle_scene)
