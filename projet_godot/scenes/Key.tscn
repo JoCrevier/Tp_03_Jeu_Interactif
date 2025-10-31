@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://byoilm0iutryh"]
+
+[ext_resource type="Script" uid="uid://bpixsdhr4ath8" path="res://scenes/key.gd" id="1_aruhq"]
+[ext_resource type="Texture2D" uid="uid://dcepbid2o8w4k" path="res://assets/spritesheets/spritesheet-tiles-default.png" id="1_px33k"]
+[ext_resource type="AudioStream" uid="uid://bbksqe21npoxn" path="res://sounds/sfx_select.ogg" id="3_mxmed"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aruhq"]
+radius = 26.0
+
+[node name="Cle" type="Area2D"]
+script = ExtResource("1_aruhq")
+
+[node name="KeyBlue" type="Sprite2D" parent="."]
+texture = ExtResource("1_px33k")
+region_enabled = true
+region_rect = Rect2(774.447, 78.2767, 50.6746, 35.4707)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aruhq")
+
+[node name="CleSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mxmed")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

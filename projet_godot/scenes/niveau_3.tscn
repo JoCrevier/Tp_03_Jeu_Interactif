@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://5xblvna07jy"]
+[gd_scene load_steps=16 format=4 uid="uid://5xblvna07jy"]
 
 [ext_resource type="Texture2D" uid="uid://buw080ud063cb" path="res://assets/Background/city 1/6.png" id="1_b2enb"]
 [ext_resource type="TileSet" uid="uid://cwqycux5h0q2u" path="res://assets/spritesheets/paysage_tile_set.tres" id="2_qitqr"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://d1tpckccau23u" path="res://scenes/HUD.tscn" id="10_vkgxk"]
 [ext_resource type="Texture2D" uid="uid://bompkb36glic4" path="res://assets/spritesheets/Assets_Egout.png" id="11_b2enb"]
 [ext_resource type="Script" uid="uid://b22451c82ruem" path="res://scenes/area_2d.gd" id="11_v4ge3"]
+[ext_resource type="PackedScene" uid="uid://dxhcc32a3otub" path="res://scenes/obstacle.tscn" id="13_qitqr"]
+[ext_resource type="PackedScene" uid="uid://byoilm0iutryh" path="res://scenes/Key.tscn" id="14_0i0eu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qitqr"]
 size = Vector2(40, 70)
@@ -105,6 +107,7 @@ scale = Vector2(0.5, 0.5)
 [node name="CanvasLayer" parent="." instance=ExtResource("10_vkgxk")]
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(23, 0)
 script = ExtResource("11_v4ge3")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
@@ -118,6 +121,23 @@ region_rect = Rect2(207.448, 160.274, 16.9548, 32.1834)
 position = Vector2(-460, 569)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_qitqr")
+
+[node name="Area2D2" parent="." instance=ExtResource("13_qitqr")]
+position = Vector2(-477, 592)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D3" parent="." instance=ExtResource("13_qitqr")]
+position = Vector2(-477, 560)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D4" parent="." instance=ExtResource("13_qitqr")]
+position = Vector2(-477, 528)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D5" parent="." instance=ExtResource("14_0i0eu")]
+position = Vector2(1604, 366)
+scale = Vector2(0.5, 0.5)
+groupe_cle = "cle_bleu"
 
 [connection signal="body_entered" from="groupe_panneau/PanneauMessage" to="groupe_panneau/PanneauMessage" method="show_message"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

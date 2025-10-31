@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://de82iea1y2ek7" path="res://scenes/panneau_message.tscn" id="3_ruoco"]
 [ext_resource type="Script" uid="uid://cnf4o5qr4x1by" path="res://scripts/controle_camera.gd" id="4_5hoti"]
 [ext_resource type="PackedScene" uid="uid://dklftmfk5csx5" path="res://scenes/ascenseur.tscn" id="5_tiqbr"]
-[ext_resource type="Script" uid="uid://724ggxrdfxij" path="res://scenes/porte.gd" id="10_7e15m"]
+[ext_resource type="Script" uid="uid://b5607f1ugq8ua" path="res://scenes/porte.gd" id="10_7e15m"]
 [ext_resource type="PackedScene" uid="uid://cdsahgp1nwc70" path="res://scenes/niveau_2.tscn" id="11_7e15m"]
 [ext_resource type="Texture2D" uid="uid://bompkb36glic4" path="res://assets/spritesheets/Assets_Egout.png" id="11_danug"]
 [ext_resource type="PackedScene" uid="uid://bu32uoqhm7aph" path="res://scenes/powerup.tscn" id="13_rewv3"]
