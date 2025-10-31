@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://cdsahgp1nwc70"]
+[gd_scene load_steps=12 format=4 uid="uid://cdsahgp1nwc70"]
 
 [ext_resource type="Texture2D" uid="uid://buw080ud063cb" path="res://assets/Background/city 1/6.png" id="1_6qnsx"]
 [ext_resource type="TileSet" uid="uid://dntede6t40jy" path="res://assets/spritesheets/paysage_tile_set2.tres" id="2_w437x"]
 [ext_resource type="PackedScene" uid="uid://bu32uoqhm7aph" path="res://scenes/powerup.tscn" id="4_36d61"]
-[ext_resource type="PackedScene" uid="uid://df4o6yn6uk8hi" path="res://scenes/niveau_test.tscn" id="4_u2du6"]
 [ext_resource type="PackedScene" uid="uid://de82iea1y2ek7" path="res://scenes/panneau_message.tscn" id="5_u2du6"]
 [ext_resource type="PackedScene" uid="uid://dirydc1jhbrdb" path="res://scenes/joueur.tscn" id="7_heyxu"]
 [ext_resource type="Script" uid="uid://cnf4o5qr4x1by" path="res://scripts/controle_camera.gd" id="8_xi8oq"]
@@ -52,10 +51,6 @@ tile_set = ExtResource("2_w437x")
 position = Vector2(0, 240)
 tile_map_data = PackedByteArray("AAAMAAYAAAAFAAkAAAAMAAcAAAAFAAkAAAAMAAgAAAAFAAoAAAAMAAkAAAAFAAsAAAAMAAoAAAAFAAkAAAAMAAsAAAAFAAoAAAAMAAwAAAAFAAsAAAAFAAwAAAALAAwAAAAGAAwAAAAMAAwAAAADAAwAAAAMAAwAAABmABIAAAAKAAoAAABoABIAAAALAAwAAABpABIAAAAMAAwAAABqABIAAAAMAAwAAABbAAwAAAAKAAwAAABaAAwAAAAKAAoAAABSAAwAAAAKAAoAAABmAAQAAAAKAAwAAABnAAQAAAAKAAwAAABsAAQAAAAKAAoAAABUAAwAAAALAAwAAABRAB4AAAALAAwAAABSAB4AAAAMAAwAAABPAB4AAAAMAAwAAABdAB4AAAAKAAwAAABdAB0AAAAKAAwAAABcAB4AAAAKAAwAAABiAB4AAAAKAAoAAAA=")
 tile_set = ExtResource("2_w437x")
-
-[node name="Area2D" parent="." instance=ExtResource("11_rlbik")]
-position = Vector2(20, 422)
-nouvelle_scene = ExtResource("4_u2du6")
 
 [node name="groupe_powerup" type="Node2D" parent="."]
 position = Vector2(205, 119)
@@ -198,5 +193,9 @@ position = Vector2(-728, 731)
 [node name="MenuControle" parent="." instance=ExtResource("10_rlbik")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("11_36d61")]
+
+[node name="Area2D" parent="." instance=ExtResource("11_rlbik")]
+position = Vector2(200, 348)
+scale = Vector2(1, 0.5)
 
 [connection signal="body_entered" from="groupe_panneau/PanneauMessage" to="groupe_panneau/PanneauMessage" method="show_message"]

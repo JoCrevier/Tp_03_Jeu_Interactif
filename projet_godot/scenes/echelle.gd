@@ -5,5 +5,4 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is joueur:
-		print("Porte activée, scène :", nouvelle_scene)
-		Main.changer_scene(nouvelle_scene)
+		Main.revenir_scene_precedente()
